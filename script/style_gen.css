@@ -1,0 +1,15 @@
+.width_7
+{
+    display: inline-block;
+    width: 7em;
+}
+
+label input.input_radio
+{
+	margin: 0 4px 4px 0;
+}
+
+label
+{
+	display: inline-block;
+}
