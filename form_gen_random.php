@@ -23,6 +23,8 @@
 
 	$m_value = $_POST[ 'm_value' ];
 
+	$pc_value = $_POST[ 'pc_value' ];
+
 
 
 
@@ -260,6 +262,10 @@
 	}
 
 	asort($new_data);
+
+	echo $pc_value . ' - '.$m_value;
+
+	echo $total_pc = ( $pc_value * $m_value ) % 100 ; 
 
 	echo '<pre>';
 	print_r($new_data);

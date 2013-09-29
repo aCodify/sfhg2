@@ -30,8 +30,8 @@ $CI_DB = DB(array(
 	'dbcollat' => 'utf8_general_ci',
 	'hostname' => 'localhost',
 	'username' => 'root',
-	'password' => '',
-	'database' => 'db_project',
+	'password' => 'password',
+	'database' => 'sfhg',
 	'dbprefix' => ''
 ));
 

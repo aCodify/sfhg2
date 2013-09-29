@@ -50,7 +50,11 @@
 				</select>
 			</p>
 			<p class='input_total_group' ><span class="width_7">Total Group</span> : <input  name="total_group" type="text"></p>
-			<p class='m_value'  style="display: none;" ><span class="width_7">M value</span> : <input  name="m_value" type="text"></p>
+			<p class='m_value'  style="display: none;" >
+				<span class="width_7">M value</span> : <input  name="m_value" type="text">
+				<br>
+				<span class="width_7">PC value</span> : <input  name="pc_value" type="text">
+			</p>
 			<p>
 				<span class="width_7"></span>
 				<label><input class="input_radio" id="radio" type="radio" value="2" name="radio">SFHG method </label>
