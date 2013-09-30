@@ -12,12 +12,15 @@
 
 	// file config system and config database
 	include_once 'config.php'; 
+	include_once 'function.php';
 
 	if ( empty( $_POST[ 'total_group' ] )  OR  empty( $_POST[ 'm_value' ] )  ) 
 	{
 		echo "<caption>	system is error. system is request method post value </caption>";
 		die();
 	}
+
+	$total_group = $_POST[ 'total_group' ];
 
 	$course_id = $_POST[ 'course_id' ];
 
@@ -263,12 +266,24 @@
 
 	asort($new_data);
 
-	echo $pc_value . ' - '.$m_value;
 
-	echo $total_pc = ( $pc_value * $m_value ) % 100 ; 
+	foreach ( $new_data as $key => $value ) 
+	{
+		$set_new_data[] = $value;
+	}
+
+	$total_pc = ( $pc_value * $m_value ) / 100 ; 
+
+	$st_value = abs( $total_pc-$m_value );
 
 	echo '<pre>';
-	print_r($new_data);
+	print_r($set_new_data);
+	echo '</pre>';
+
+	$data_global = call_data( $_POST[ 'course_id' ] , $_POST[ 'total_group' ] );
+
+	echo '<pre>';
+	print_r( $data_global );
 	echo '</pre>';
 
 ?>
@@ -296,3 +311,6 @@
 
     </body>
 </html>
+
+
+
