@@ -276,15 +276,39 @@
 
 	$st_value = abs( $total_pc-$m_value );
 
+	// echo '<pre>';
+	// print_r($set_new_data);
+	// echo '</pre>';
+
+	for ( $i=0 ; $i < $st_value ; $i++ ) 
+	{ 
+		$data_global = call_data( $_POST[ 'course_id' ] , $_POST[ 'total_group' ] );
+
+		$over_set[] = $data_global->fitness;
+	}
+
+
+	// echo '<pre>';
+	// print_r( $over_set );
+	// echo '</pre>';
+
+	$new_st_value = $st_value+2;
+	$index_set = 0;
+
+
+
+	for ( $i= $new_st_value; $i < $m_value; $i++ ) 
+	{ 
+		$set_new_data[$i] = $over_set[$index_set];
+		$index_set++;
+	}
+
+	asort($set_new_data);
+
 	echo '<pre>';
-	print_r($set_new_data);
+	print_r( $set_new_data );
 	echo '</pre>';
 
-	$data_global = call_data( $_POST[ 'course_id' ] , $_POST[ 'total_group' ] );
-
-	echo '<pre>';
-	print_r( $data_global );
-	echo '</pre>';
 
 ?>
 
