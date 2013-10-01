@@ -309,7 +309,7 @@
 	print_r( $set_new_data );
 	echo '</pre>';
 
-	// end
+	// end.
 
 ?>
 
